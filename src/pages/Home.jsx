@@ -7,6 +7,7 @@ import Sky from "../models/Sky";
 import Plane from "../models/Plane";
 import Bird from "../models/Bird";
 import HomeInfo from "../components/HomeInfo";
+import Dragon from "../models/Dragon";
 
 const Home = () => {
   const [currentStage, setCurrentStage] = useState(1);
@@ -40,8 +41,7 @@ const Home = () => {
     return [screenScale, screenPosition];
   };
 
-  const [islandScale, islandPosition, islandRotation] =
-    adjustIslandForScreenSize();
+  const [islandScale, islandPosition] = adjustIslandForScreenSize();
   const [planeScale, planePosition] = adjustPlaneForScreenSize();
 
   return (
@@ -66,11 +66,12 @@ const Home = () => {
           />
 
           <Bird />
+          {/* <Dragon /> */}
           <Sky isRotating={isRotating} />
           <Island
             position={islandPosition}
             scale={islandScale}
-            rotation={islandRotation}
+            rotation={[0.1, 4.7077, 0]}
             setCurrentStage={setCurrentStage}
             isRotating={isRotating}
             setIsRotating={setIsRotating}
@@ -79,7 +80,7 @@ const Home = () => {
             isRotating={isRotating}
             planeScale={planeScale}
             planePosition={planePosition}
-            rotation={[0, 20, 0]}
+            rotation={[0, 20.1, 0]}
           />
         </Suspense>
       </Canvas>
