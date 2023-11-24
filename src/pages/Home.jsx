@@ -8,6 +8,7 @@ import Plane from "../models/Plane";
 import Bird from "../models/Bird";
 import HomeInfo from "../components/HomeInfo";
 import Dragon from "../models/Dragon";
+import Dalaran from "../models/Dalaran";
 
 const Home = () => {
   const [currentStage, setCurrentStage] = useState(1);
@@ -76,6 +77,7 @@ const Home = () => {
             isRotating={isRotating}
             setIsRotating={setIsRotating}
           />
+          {/* <Dalaran /> */}
           <Plane
             isRotating={isRotating}
             planeScale={planeScale}
