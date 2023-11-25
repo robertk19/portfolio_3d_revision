@@ -55,10 +55,10 @@ const Home = () => {
         className={`w-full h-screen bg-transparent ${
           isRotating ? "cursor-grabbing" : "cursor-grab"
         }`}
-        camera={{ near: 0.1, far: 1000 }}
+        camera={{ near: 0.1, far: 10000 }} // *(, fov: 65, position: [1, 0.5, 5] FOR DALARAN)
       >
         <Suspense fallback={<Loader />}>
-          <directionalLight position={[1, 1, 1]} intensity={2} />
+          <directionalLight position={[1, 1, 1]} intensity={2.5} />
           <ambientLight intensity={0.5} />
           <hemisphereLight
             skyColor="b1e1ff"
@@ -77,7 +77,13 @@ const Home = () => {
             isRotating={isRotating}
             setIsRotating={setIsRotating}
           />
-          {/* <Dalaran /> */}
+          {/* <Dalaran
+            position={[0, -1, -5]}
+            rotation={[0.1, 4.7077, 0]}
+            scale={[0.005, 0.005, 0.005]}
+            isRotating={isRotating}
+            setIsRotating={setIsRotating}
+          /> */}
           <Plane
             isRotating={isRotating}
             planeScale={planeScale}

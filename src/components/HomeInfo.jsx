@@ -17,7 +17,15 @@ const renderContent = {
     <h1 className="sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-5">
       Hi, my name is <span className="font-semibold">Robert</span>
       👋.
-      <br />A Software Developer from Melbourne, Australia.
+      <br />A Software Developer from Melbourne, Australia!
+      <br />
+      <br />
+      <span className="font-semibold">Click and Drag</span> anywhere on the
+      screen to begin,
+      <br /> or use your <span className="font-semibold">
+        Left and Right
+      </span>{" "}
+      arrow keys.
     </h1>
   ),
   2: (
