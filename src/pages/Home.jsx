@@ -1,5 +1,6 @@
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 
 import Loader from "../components/Loader";
 import Island from "../models/Island";
@@ -91,8 +92,8 @@ const Home = () => {
           /> */}
           <Plane
             isRotating={isRotating}
-            planeScale={planeScale}
-            planePosition={planePosition}
+            scale={planeScale}
+            position={planePosition}
             rotation={[0, 20.1, 0]}
           />
         </Suspense>

@@ -2,14 +2,22 @@ import hero from './hero.jpg'
 import meta from './meta.png'
 import shopify from './shopify.png'
 import starbucks from './starbucks.png'
+import boxhill from './boxhill.png'
 import tesla from './tesla.png'
 import logo from './logo.svg'
+import cisco from './cisco.png'
+import monash from './monash.png'
+import fdm from './fdm.png'
 
 export {
     hero,
     meta,
     shopify,
     starbucks,
+    boxhill,
+    cisco,
     tesla,
-    logo
+    logo,
+    monash,
+    fdm
 }

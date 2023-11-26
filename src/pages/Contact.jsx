@@ -6,6 +6,7 @@ import Fox from "../models/Fox";
 import Loader from "../components/Loader";
 import useAlert from "../hooks/useAlert";
 import Alert from "../components/Alert";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const formRef = useRef();
@@ -73,11 +74,30 @@ const Contact = () => {
       {alert.show && <Alert {...alert} />}
 
       <div className="flex-1 min-w-[50%] flex flex-col">
-        <h1 className="head-text">
-          Get in Touch
-          <form
-            className="w-full flex flex-col gap-7 mt-14"
-            onSubmit={handleSubmit}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.8,
+            delay: 0.2,
+            ease: [0, 0.71, 0.2, 1.01],
+          }}
+        >
+          <h1 className="head-text">Get in Touch</h1>
+        </motion.div>
+
+        <form
+          className="w-full flex flex-col gap-7 mt-14"
+          onSubmit={handleSubmit}
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.3,
+              ease: [0, 0.71, 0.2, 1.01],
+            }}
           >
             <label className="text-black-500 font-semibold">
               Name
@@ -92,7 +112,17 @@ const Contact = () => {
                 onBlur={handleBlur}
               />
             </label>
+          </motion.div>
 
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.4,
+              ease: [0, 0.71, 0.2, 1.01],
+            }}
+          >
             <label className="text-black-500 font-semibold">
               Email
               <input
@@ -106,7 +136,17 @@ const Contact = () => {
                 onBlur={handleBlur}
               />
             </label>
+          </motion.div>
 
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.5,
+              ease: [0, 0.71, 0.2, 1.01],
+            }}
+          >
             <label className="text-black-500 font-semibold">
               Your Message
               <textarea
@@ -121,6 +161,17 @@ const Contact = () => {
                 onBlur={handleBlur}
               />
             </label>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.6,
+              ease: [0, 0.71, 0.2, 1.01],
+            }}
+          >
             <button
               type="submit"
               className="btn"
@@ -130,8 +181,8 @@ const Contact = () => {
             >
               {isLoading ? "Sending..." : "Send Message"}
             </button>
-          </form>
-        </h1>
+          </motion.div>
+        </form>
       </div>
 
       <div className="lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px] ">
